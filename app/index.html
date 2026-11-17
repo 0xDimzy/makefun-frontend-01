@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make.fun bounties</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5cad'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif'%3Em%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0 auto;max-width:980px;padding:0 16px 64px;font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:#17191f;background:#fff}
+header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:14px 0;border-bottom:1px solid #e3e5e8}
+.brand{font-weight:700;font-size:18px;color:#17191f;text-decoration:none}
+.brand span{color:#0b5cad}
+header form{margin-left:auto;display:flex;gap:6px}
+header input{padding:6px 8px;border:1px solid #c9cdd3;border-radius:6px;font:inherit;width:210px}
+button,.btn{padding:6px 12px;border:1px solid #0b5cad;background:#0b5cad;color:#fff;border-radius:6px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost,.btn.ghost{background:#fff;color:#0b5cad}
+button[disabled]{opacity:.55;cursor:default}
+a{color:#0b5cad}
+h1{font-size:26px;margin:20px 0 8px}
+h2{font-size:20px;margin:28px 0 8px}
+.muted{color:#5b6068}
+.board{list-style:none;margin:0;padding:0}
+.board>li{padding:14px 0;border-bottom:1px solid #eceef0}
+.board .t{font-size:18px;font-weight:650}
+.meta{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:4px;color:#3d4148;font-size:14px}
+.meta .pot{font-weight:700;color:#0a6b2e}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:13px;font-weight:600}
+.pill.open{background:#e3f4e8;color:#0a6b2e}
+.pill.closed{background:#f1f2f3;color:#5b6068}
+.filters{display:flex;gap:6px;margin:12px 0}
+.filters button{background:#fff;color:#17191f;border-color:#c9cdd3}
+.filters button[aria-pressed="true"]{background:#17191f;color:#fff;border-color:#17191f}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:16px 0}
+dl.facts dt{font-weight:650}
+dl.facts dd{margin:0}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #eceef0;vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#5b6068}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.description{white-space:pre-wrap;overflow-wrap:anywhere}
+details{margin:16px 0}
+summary{cursor:pointer;font-weight:650}
+.error{border:1px solid #e8b4b4;background:#fdf2f2;padding:16px;border-radius:8px;margin:20px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid #e3e5e8;color:#5b6068;font-size:14px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 28px;margin:12px 0}
+.stats b{font-size:20px;display:block}
+.pager{display:flex;gap:8px;align-items:center;margin:12px 0}
+@media (max-width:640px){body{font-size:15px}h1{font-size:22px}header input{width:150px}dl.facts{grid-template-columns:1fr;gap:0}dl.facts dd{margin-bottom:8px}}
+</style>
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header>
+<a class="brand" href="#/">make<span>.</span>fun · bounties</a>
+<form id="profile-search" role="search">
+<input name="handle" type="search" placeholder="Look up a handle" aria-label="Look up a handle" autocomplete="off">
+<button type="submit">Profile</button>
+</form>
+</header>
+<main id="app"><p class="muted">Loading…</p></main>
+<footer><p>Live data from make.fun's public API. An unofficial frontend — not affiliated with make.fun.</p></footer>
+</body>
+</html>
